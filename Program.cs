@@ -16,15 +16,17 @@ namespace MyApp
         static void Main(string[] args)
         {
 
-            Comment c1 = new Comment("Have a nice trip");
-            Comment c2 = new Comment("Wow that's awesome");
+            Account acc1 = new Account(1001, "Alex", 500);
+            Account acc2 = new SavingAccount(1002, "Anna", 500, 0.01);
 
-            Post p1 = new Post(DateTime.Now, "Title", "", 3);
-            p1.addComment(c1);
-            p1.addComment(c2);
+            acc1.WithDraw(10);
+            acc2.WithDraw(10);
+
+            Console.WriteLine(acc1.Balance);
+            Console.WriteLine(acc2.Balance);
 
 
-            Console.WriteLine(p1);
+
 
         }
 
